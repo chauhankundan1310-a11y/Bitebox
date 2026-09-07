@@ -33,6 +33,9 @@
                             <a class="nav-link" aria-current="page" href="bitedeals.html">BiteDeals</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Contact</a>
                         </li>
                         <li class="nav-item">
@@ -51,29 +54,33 @@
     <h1>Customer Registration & Order form</h1>
     <form>
         <h3>Customer Information</h3>
-            <div class="mb-3">
-                <label for="fullname">Full Nmae: </label>
-                <input type="text" id="fullname" name="fullname" required>
-    
-            </div>
-            <div class="mb-3">
-            
-                <label for="emai">Email: </label>
-                <input type="email" id="emai" name="emai" required>
-            
-            </div>
-            <div class="mb-3">
-    
-                <label for="password">Password: </label>
-                <input type="password" id="password" name="password" required>
-        
-            </div>
-            <div class="mb-3">
-        
-                <label for="phone">Phone Number: </label>
-                <input type="tel" id="phone" name="phone" required>
-            
-            </div>
+        <div class="mb-3">
+            <label for="fullname">Full Nmae: </label>
+            <input type="text" id="fullname" name="fullname" required>
+
+        </div>
+        <div class="mb-3">
+
+            <label for="emai">Email: </label>
+            <input type="email" id="emai" name="emai" required>
+
+        </div>
+        <div class="mb-3">
+
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" required>
+
+        </div>
+        <div class="mb-3">
+
+            <label for="phone">Phone Number: </label>
+            <input type="tel" id="phone" name="phone" required>
+
+        </div>
+
+
+
+
         <br>
         <h3>Order Information</h3>
         <table>
@@ -90,66 +97,169 @@
             <tr>
                 <td><label for="food" class="required">Select Food:</label></td>
                 <td>
-                <select id="food" name="food" required>
-                    <option value="Please choose an item"></option>
-                    <option value="Pizza">Pizza</option>
-                    <option value="Burger">Burger</option>
-                    <option value="Pasta">Pasta</option>
-                    <option value="Deserts">Deserts</option>
-                    <option value="Beverages">Beverages</option>
 
-                </select>
+                    <select id="food" name="food" class="form-select" aria-label="Default select example" required>
+                        <option selected>Open this select Food</option>
+                        <option value="Pizza">Pizza</option>
+                        <option value="Burger">Burger</option>
+                        <option value="Pasta">Pasta</option>
+                        <option value="Deserts">Deserts</option>
+                        <option value="Beverages">Beverages</option>
+                    </select>
                 </td>
             </tr>
         </table>
         <h3>Payment Method</h3>
         <table>
             <tr>
-                <td><label for="Payment" class="required">Select Payment Method</label></td>
+                <td><label for="Payment" class="required">Select Payment Method: </label></td>
                 <td>
-                    <input type="radio" id="creditcard" name="Payment" value="creditcard">
-                    <label for="creditcard">creditcard</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Payment" id="creditcard" value="creditcard">
+                        <label class="form-check-label" for="creditcard">
+                            Creditcard
+                        </label>
+                    </div>
 
-                    <input type="radio" id="debitcard" name="Payment" value="debitcard">
-                    <label for="debitcard">Debitcard</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Payment" id="debitcard" value="debitcard">
+                        <label class="form-check-label" for="debitcard">
+                            Debitcard
+                        </label>
+                    </div>
 
-                    <input type="radio" id="cash" name="Payment" value="cash">
-                    <label for="cash">Cash</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Payment" id="cash" value="cash">
+                        <label class="form-check-label" for="cash">
+                            Cash
+                        </label>
+                    </div>
                 </td>
             </tr>
         </table>
         <h3>Extras</h3>
         <table>
-            <td><label for="Extras">Select Extras:</label></td>
+            <td><label for="Extras">Select Extras: </label></td>
             <td>
-                <input type="checkbox" id="chees" name="Extras" value="chees">
-                <label for="chees">Extra chees</label>
 
-                <input type="checkbox" id="sauce" name="Extras" value="sauce">
-                <label for="sauce">Extra sauce</label>
 
-                <input type="checkbox" id="toppings" name="Extras" value="toppings">
-                <label for="toppings">Extra Toppings</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="chees" id="chees">
+                    <label class="form-check-label" for="chees">
+                        Extra Chees
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="sauce" id="sauce">
+                    <label class="form-check-label" for="sauce">
+                        Extra Sauce
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="toppings" id="toppings">
+                    <label class="form-check-label" for="toppings">
+                        Extra Toppings
+                    </label>
+                </div>
             </td>
 
         </table>
         <h3>Delivery Instraction</h3>
         <table>
             <tr>
-        <td><label for="deliveryinstraction">Delivery Instraction</label></td>
-        <td><textarea
-        id="deliveryinstraction" name="deliveryinstraction" rows="4" cols="50"></textarea>
-        </td>
-        </tr>
-        <tr>
-            <td><input class="btn btn-primary" type="submit" value="Submit order"></td>
-            <td><input class="btn btn-danger" type="reset" value="Reset order"></td>
-        </tr>
+                <td><label for="deliveryinstraction">Delivery Instraction: </label></td>
+                <td><textarea id="deliveryinstraction" name="deliveryinstraction" rows="4" cols="50"></textarea>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td><input class="btn btn-primary" type="submit" value="Submit order"></td>
+                <td><input class="btn btn-danger" type="reset" value="Reset order"></td>
+            </tr>
         </table>
     </form>
-    
+
     <footer>
-        <p>© 2026 BiteBox.All Rights Reserved.</p>
+
+        <!-- Footer Logo Section -->
+        <section>
+            <img src="assets/images/logo.png" alt="BiteBox Logo" width="180">
+            <p> Delicious food delivered to your doorstep.
+                Fresh, fast and tasty!
+            </p>
+
+            <a href="#">
+                <img src="assets/images/facebook.png" alt="Facebook" width="35" height="35">
+            </a>
+
+            <a href="#">
+                <img src="assets/images/instagram.png" alt="Instagram" width="35" height="35">
+            </a>
+
+            <a href="#">
+                <img src="assets/images/twitter.png" alt="Twitter" width="35" height="35">
+            </a>
+
+            <a href="#">
+                <img src="assets/images/youtube.png" alt="YouTube" width="35" height="35">
+            </a>
+        </section>
+
+        <hr>
+
+        <!-- Quick Links -->
+        <section>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+
+        </section>
+
+        <hr>
+
+        <!-- Customer Service -->
+        <section>
+            <h3>Customer Service</h3>
+            <ul>
+                <li>Track Order</li>
+                <li>FAQs</li>
+                <li>Shipping Policy</li>
+                <li>Return Policy</li>
+                <li>Terms & Conditions</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Contact Information -->
+        <section>
+            <h3>Contact Us</h3>
+            <p>📞 +91 98765 43210</p>
+            <p>✉ support@bitebox.com</p>
+            <p>📍 123 Food Street, Mumbai, Maharashtra 400001 </p>
+        </section>
+
+        <hr>
+
+        <!-- Payment Methods -->
+        <section>
+            <h3>Payment Methods</h3>
+            <img src="assets/images/visa.png" alt="Visa" width="60">
+            <img src="assets/images/mastercard.png" alt="MasterCard" width="60">
+            <img src="assets/images/upi" alt="UPI" width="60">
+            <img src="assets/images/paytm" alt="Paytm" width="60">
+        </section>
+
+        <hr>
+        <p> © 2026 BiteBox. All Rights Reserved. </p>
+
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
