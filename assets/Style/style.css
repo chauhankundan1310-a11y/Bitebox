@@ -17,10 +17,19 @@
 .nav-link:hover{
     border-bottom: 1px solid #ff6b00;
 }
+.nav-link:active{
+    border-bottom: 1px solid #ff6b00;
+    font-size: 18px;
+}
 table{
     border: 1px solid black;
 }
 table th, td{
     border: 1px solid black;
     padding: 5px;
+}
+#playPauseBtn{
+    background-color:hsla(26, 84%, 43%, 0.1);
+    padding: 10px 20px;
+    color: white;
 }
