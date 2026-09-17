@@ -136,69 +136,598 @@
     </div>
   </section>
   <section id="menu-items">
-    <h2>Our Menu</h2>
-    <div>
+
+    <h2>
+      <span></span>
+      Menu Items
+      <span></span>
+    </h2>
+
+
+    <div class="menu-controls">
+
+      <div class="menu-search">
+
+        <input type="text" id="menu-search" placeholder="Search for dishes...">
+
+        <button type="button" id="search-button">
+          <img src="assets/icons/search.png" alt="Search" width="20" height="20">
+        </button>
+
+      </div>
+
+      <button type="button" id="add-menu-btn">
+        + Add Menu Item
+      </button>
+
+    </div>
+
+
+    <!-- Add Menu Item Modal -->
+
+    <div id="menu-modal" class="menu-modal">
+
+      <div class="menu-modal-content">
+
+        <div class="modal-header">
+
+          <h2>Add Menu Item</h2>
+
+        </div>
+
+
+        <form id="menu-form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="menu-name"> Menu Item Name </label>
+              <input type="text" id="menu-name" placeholder="Enter item name" required>
+            </div>
+
+
+            <div class="form-group">
+              <label for="menu-price"> Price (₹) </label>
+              <input type="number" id="menu-price" placeholder="Enter price" required>
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="menu-category"> Category </label>
+              <input type="text" id="menu-category" placeholder="Enter category" required>
+            </div>
+
+
+            <div class="form-group">
+              <label for="menu-rating"> Rating (0 - 5) </label>
+              <input type="text" id="menu-rating" placeholder="★★★★★" required>
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="menu-reviews"> Number of Reviews </label>
+              <input type="number" id="menu-reviews" placeholder="Enter number of reviews" required>
+            </div>
+
+
+            <div class="form-group">
+              <label for="menu-image"> Image URL / Path </label>
+              <input type="text" id="menu-image" placeholder="Enter image URL or path" required>
+            </div>
+
+          </div>
+
+
+          <div class="form-actions">
+            <button type="button" id="cancel-menu-form"> Cancel </button>
+            <button type="submit"> Add Menu Item </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div id="menu-container">
+
       <!-- Menu Item 1 -->
-      <article>
-        <img src="assets/images/margherita-pizza.png" width="220">
+
+      <article data-category="pizza">
+
+        <span class="tag">Bestseller</span>
+
+        <img src="assets/images/margherita-pizza.png" alt="Margherita Pizza">
+
         <h3>Margherita Pizza</h3>
-        <p> ⭐⭐⭐⭐⭐ <small>(120)</small> </p>
-        <p> <strong>₹249</strong></p>
-        <button> Add to Cart </button>
+
+        <p class="rating">
+          ★★★★★
+          <small>(120)</small>
+        </p>
+
+        <p class="price">₹249</p>
+
+        <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
+        <button>
+          <img class="cart" src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
       </article>
 
       <!-- Menu Item 2 -->
-      <article>
-        <img src="assets/images/cheese-burger.png" width="220">
-        <h3>Cheese Burger</h3>
-        <p>⭐⭐⭐⭐⭐<small>(98)</small></p>
-        <p> <strong> ₹199 </strong> </p>
-        <button> Add to Cart </button>
-      </article>
 
+      <article data-category="burger">
+
+        <img src="assets/images/cheese-burger.png" alt="Cheese Burger">
+
+        <h3>Cheese Burger</h3>
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(98)</small>
+        </p>
+
+        <p class="price">₹199</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
+        <button>
+          <img class="cart" src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
+      </article>
 
       <!-- Menu Item 3 -->
-      <article>
-        <img src="assets/images/alfredo-pasta.png" width="220">
+
+      <article data-category="pasta">
+
+        <img src="assets/images/alfredo-pasta.png" alt="Creamy Alfredo Pasta">
+
         <h3>Creamy Alfredo Pasta</h3>
-        <p>⭐⭐⭐⭐⭐ <small> (85) </small>
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(85)</small>
         </p>
-        <p> <strong>₹229</strong> </p>
-        <button> Add to Cart </button>
+
+        <p class="price">₹229</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img  src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
+        <button>
+          <img class="cart" src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
       </article>
 
-
       <!-- Menu Item 4 -->
-      <article>
-        <img src="assets/images/chicken-biryani.png" width="220">
+
+      <article data-category="biryani">
+
+        <span class="tag spicy">Spicy</span>
+
+        <img src="assets/images/chicken-biryani.png" alt="Chicken Biryani">
+
         <h3>Chicken Biryani</h3>
-        <p> ⭐⭐⭐⭐⭐ <small>(110)</small> </p>
-        <p> <strong>₹279</strong> </p>
-        <button> Add to Cart </button>
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(110)</small>
+        </p>
+
+        <p class="price">₹279</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
+        <button>
+          <img class="cart" src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
       </article>
 
       <!-- Menu Item 5 -->
-      <article>
-        <img src="assets/images/choco-lava-cake.png" width="220">
-        <h3>Choco Lava Cake</h3>
-        <p> ⭐⭐⭐⭐⭐ <small>(75)</small> </p>
-        <p> <strong>₹149</strong> </p>
-        <button> Add to Cart </button>
-      </article>
 
+      <article data-category="desserts">
+
+        <img src="assets/images/choco-lava-cake.png" alt="Choco Lava Cake">
+
+        <h3>Choco Lava Cake</h3>
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(75)</small>
+        </p>
+
+        <p class="price">₹149</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
+        <button>
+          <img class="cart" src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
+      </article>
 
       <!-- Menu Item 6 -->
-      <article>
-        <img src="assets/images/veg-club-sandwich.png" width="220">
+
+      <article data-category="sandwich">
+
+        <img src="assets/images/veg-club-sandwich.png" alt="Veg Club Sandwich">
+
         <h3>Veg Club Sandwich</h3>
-        <p>⭐⭐⭐⭐⭐<small>(60)</small> </p>
-        <p> <strong>₹179</strong> </p>
-        <button> Add to Cart </button>
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(60)</small>
+        </p>
+
+        <p class="price">₹179</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
+        <button>
+          <img class="cart" src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
       </article>
+
+      <!-- Menu Item 7 -->
+
+      <article data-category="tandoor">
+
+        <img src="assets/images/paneer-tikka.png">
+
+        <h3>Paneer Tikka</h3>
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(69)</small>
+        </p>
+
+        <p class="price">₹210</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
+        <button>
+          <img class="cart" src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
+      </article>
+
+      <!-- Menu Item 8 -->
+
+      <article data-category="tandoor">
+
+        <img src="assets/images/tandoori.png">
+
+        <h3>Chicken Tandoori</h3>
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(175)</small>
+        </p>
+
+        <p class="price">₹320</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
+        <button>
+          <img class="cart" src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
+      </article>
+
+      <!-- Menu Item 9 -->
+
+      <article data-category="starter">
+
+        <img src="assets/images/soup.png">
+
+        <h3>Munchow Soup</h3>
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(79)</small>
+        </p>
+
+        <p class="price">₹200</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
+        <button>
+          <img class="cart" src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
+      </article>
+
+      <!-- Menu Item 9 -->
+
+      <article data-category="pasta">
+
+        <img src="assets/images/red-sauce-pasta.png">
+
+        <h3>Red Sauce Pasta</h3>
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(175)</small>
+        </p>
+
+        <p class="price">₹229</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
+        <button>
+          <img class="cart" src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
+      </article>
+
+      <!-- Menu Item 11 -->
+
+      <article data-category="desserts">
+
+        <img src="assets/images/chocolate-smoothy.png">
+
+        <h3>Chocolate Smoothy</h3>
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(175)</small>
+        </p>
+
+        <p class="price">₹120</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
+        <button>
+          <img class="cart" src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
+      </article>
+
+
+      <!-- Menu Item 12 -->
+
+      <article data-category="biryani">
+
+        <img src="assets/images/fried-rice.png">
+
+        <h3>Chicken Fried Rice</h3>
+
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(175)</small>
+        </p>
+
+        <p class="price">₹310</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
+        <button>
+          <img class="cart" src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
+      </article>
+
+
+
+      <!-- Menu Item 12 -->
+
+      <article data-category="pizza">
+
+        <img src="assets/images/cheese-n-corn.png">
+
+        <h3>Cheese n Corn Pizza</h3>
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(118)</small>
+        </p>
+
+        <p class="price">₹349</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
+        <button>
+          <img class="cart" src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
+      </article>
+
+
+
+      <article data-category="pizza">
+
+        <img src="assets/images/veggie-paradise.png">
+
+        <h3>Veggie Paradise Pizza</h3>
+
+        <p class="rating">
+          &#9733;&#9733;&#9733;&#9733;&#9733;
+          <small>(142)</small>
+        </p>
+
+        <p class="price">₹489</p>
+
+         <div class="menu-actions">
+
+          <button type="button" class="update-menu-btn">
+            <img src="assets/icons/edit.png">
+          </button>
+
+          <button type="button" class="delete-menu-btn">
+             <img src="assets/icons/delete.png">
+          </button>
+
+        </div>
+
+        <button>
+          <img class="cart" src="assets/icons/cart-button.png" alt="Cart" width="14" height="14">
+          Add to Cart
+        </button>
+
+      </article>
+
 
     </div>
 
   </section>
+
   <section id="offer">
     <div class="offer-content">
       <h2>Today's Special Offer!</h2>
@@ -210,6 +739,7 @@
     </div>
   </section>
   <footer>
+    <div class="footer-container">
 
     <!-- Footer Logo Section -->
     <section>
@@ -285,11 +815,12 @@
       <img src="assets/images/upi.png" alt="UPI" width="60">
       <img src="assets/images/paytm.png" alt="Paytm" width="60">
     </section>
-  </footer>
+  
 
   <hr>
+  </div>
   <p> © 2026 BiteBox. All Rights Reserved. </p>
-
+  </footer>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
